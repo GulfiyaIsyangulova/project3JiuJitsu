@@ -46,7 +46,7 @@ class App extends Component {
     };
 
     this.service = new AuthService();
-    Geocode.setApiKey("AIzaSyCpGcRTL6DiWCcICDtehgpbBfr4DYVN__Q");
+    Geocode.setApiKey(process.env.GEO_CODE_KEY);
 
   }
 
@@ -56,7 +56,7 @@ class App extends Component {
   }
 
   getAllGyms = () => {
-    axios.get(`http://localhost:5000/gyms`)
+    axios.get(`${process.env.REACT_APP_BASE}gyms`)
       .then(responseFromApi => {
         const data = responseFromApi.data;
 
@@ -108,7 +108,7 @@ class App extends Component {
       //make axios call here
       // console.log('VVVVVVVVV',gymInfo)
       
- axios.get(`http://localhost:5000/gyms/getPlacesDetails/` + gymInfo.info.place_id)
+ axios.get(`${process.env.REACT_APP_BASE}gyms/getPlacesDetails/` + gymInfo.info.place_id)
  .then(responseFromApi => {
       const data = responseFromApi.data.result;
       // const lat = data.geometry.location.lat;
