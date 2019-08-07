@@ -18,7 +18,7 @@ require('./config/passport-stuff');
 
 
 mongoose
-  .connect('mongodb://localhost/jiu-jitsu-locator-project', {useNewUrlParser: true})
+  .connect(process.env.MONGODB_URI, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -68,8 +68,15 @@ app.use(passport.session());
 
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3000', 'https://blah.herokuapp.com']
+  origin: ['http://localhost:3000', 'https://jiu-jitsu-locator.herokuapp.com/']
 }));
+
+
+app.use((req, res, next) => {
+  // If no routes match, send them the React HTML.
+  res.sendFile(__dirname + "/public/index.html");
+});
+
 
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/auth', userRoutes);
