@@ -46,7 +46,7 @@ class App extends Component {
     };
 
     this.service = new AuthService();
-    Geocode.setApiKey(process.env.GEO_CODE_KEY);
+    Geocode.setApiKey(process.env.REACT_APP_GEO_CODE_KEY);
 
   }
 
