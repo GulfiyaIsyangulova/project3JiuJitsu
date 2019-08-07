@@ -72,10 +72,6 @@ app.use(cors({
 }));
 
 
-app.use((req, res, next) => {
-  // If no routes match, send them the React HTML.
-  res.sendFile(__dirname + "/public/index.html");
-});
 
 
 const userRoutes = require('./routes/userRoutes');
@@ -87,5 +83,9 @@ app.use('/reviews', reviewRoutes);
 const gymsRoutes = require('./routes/gymRoutes');
 app.use('/gyms', gymsRoutes);
 
+app.use((req, res, next) => {
+  // If no routes match, send them the React HTML.
+  res.sendFile(__dirname + "/public/index.html");
+});
 
 module.exports = app;
