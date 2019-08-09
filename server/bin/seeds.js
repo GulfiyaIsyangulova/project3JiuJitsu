@@ -5,7 +5,7 @@ const Gym        = require('../models/Gym');
 // mongoose
 //   .connect('mongodb://localhost/', {useMongoClient: true})
 mongoose
-  .connect('mongodb://localhost/jiu-jitsu-locator-project', {useNewUrlParser: true})
+  .connect(process.env.MONGODB_URI, {useNewUrlParser: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
