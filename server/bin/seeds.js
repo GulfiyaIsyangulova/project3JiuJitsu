@@ -15,8 +15,8 @@ mongoose
 
 
   const blah = [
-    {"_id":{"$oid":"5d45afbddb9a070796fec774"},"name":"127 BJJ","address":"3901 A Main St. Suite 102A, Philadelphia, PA, 19127, United States of America","__v":{"$numberInt":"0"},"place_id":"ChIJZ-fAWca4xokRsXpUy_Hf4i4"},
-{"_id":{"$oid":"5d45afbddb9a070796fec775"},"name":"479-Bjj","address":"1772 W. Sunset Ste 2B, Springdale, AR, 72762, United States of America","__v":{"$numberInt":"0"},"place_id":"ChIJF9WUWtxryYcRT2vuhiAxKoQ"},
+    {"_id":{"$oid":"5d45afbddb9a070796fec774"},"name":"127 BJJ","address":"3901 A Main St. Suite 102A, Philadelphia, PA, 19127, United States of America","place_id":"ChIJZ-fAWca4xokRsXpUy_Hf4i4"},
+{"_id":{"$oid":"5d45afbddb9a070796fec775"},"name":"479-Bjj","address":"1772 W. Sunset Ste 2B, Springdale, AR, 72762, United States of America","place_id":"ChIJF9WUWtxryYcRT2vuhiAxKoQ"},
 {"_id":{"$oid":"5d4840ebfa47a50632d1470e"},"name":"Gracie Barra Arizona","address":"1 E. Deervalley Rd. Ste 208, Phoenix, AZ, 85024, United States of America","place_id":"ChIJfaOsfpNvK4cRHsu0dreexL4"},
 {"_id":{"$oid":"5d48476afa47a50632d14711"},"name":"Siri Brazilian Jiu-Jitsu","address":"8 N. Washington St., Kennewick, WA, 99336, United States of America","place_id":"ChIJofyI4tB4mFQRPPfhmq3trEc"},
 {"_id":{"$oid":"5d4847acfa47a50632d14712"},"name":"Alliance Core Brazilian Jiu-Jitsu Academy","address":"8 US 206, Stanhope, NJ, 07874, United States of America","place_id":"ChIJ7zaLIkR2w4kRdQkwSbLbkuE"},
